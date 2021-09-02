@@ -1,6 +1,8 @@
-### Games for fun 
+## Games for fun 
 
 Based on repository of @george1meshveliani
+
+## Find all links here: [https://george1meshveliani.github.io/games/](https://george1meshveliani.github.io/games/)
 
 ### Game1 - Memory game:
 
