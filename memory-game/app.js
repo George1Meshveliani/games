@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'images/hotdog.png'
           }
     ]
-    
+    cardArray.sort(() => 0.5 - Math.random())
+
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
     let cardsChosen = []
