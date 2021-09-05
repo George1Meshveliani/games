@@ -59,8 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
   let cardsChosenId = []
   let cardsWon = []
 
+
+  function showCards() {
+    for (let k = 0; k < cardArray.length; k++) {
+      const card = document.createElement('img')
+      card.setAttribute('src', cardArray[k].img)
+      card.setAttribute('class', 'shower');
+      card.setAttribute('data-id-key', k)
+      grid.appendChild(card);
+      console.log(grid.appendChild(card))
+      function cleanCards() {
+          let hint = document.querySelectorAll('.shower');
+            for(let p = 0; p < hint.length; p++) {
+              hint[p].remove();
+            }
+      }
+    }
+    setTimeout(cleanCards, 2500);
+  }
+
   //create your board
   function createBoard() {
+    // showAllCards();
     for (let i = 0; i < cardArray.length; i++) {
       const card = document.createElement('img')
       card.setAttribute('src', 'images/blank.png')
@@ -68,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.addEventListener('click', flipCard)
       grid.appendChild(card)
     }
+
   }
 
   //check for matches
@@ -111,6 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(checkForMatch, 500)
     }
   }
+  createBoard();
+  showCards();
 
-  createBoard()
 })
+
