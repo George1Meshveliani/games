@@ -8,3 +8,9 @@
 h3 {
     text-align: center;
 }
+
+button {
+    position: absolute;
+    left: calc(50% - 60px);
+    margin-top: 10px;
+}

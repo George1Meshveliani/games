@@ -91,6 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
+  function getHint() {
+    const hinter = document.querySelector('.button');
+    hinter.addEventListener('click', showCards);
+  }
+
   //check for matches
   function checkForMatch() {
     const cards = document.querySelectorAll('img')
@@ -134,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   createBoard();
   showCards();
+  getHint();
 
 })
+
 
