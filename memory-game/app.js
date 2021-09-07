@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let cardsChosen = []
   let cardsChosenId = []
   let cardsWon = []
+  let cardsLose = []
 
 
   function showCards() {
@@ -117,8 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <h1> Instructions: </h1>
     <h2> Memorize all couples and try to find all matches and get max scores </h2>
     <ul><li>Founded match: +1 point </li></ul>
-    <ul><li>Missed match: -0.2 point </li></ul>
-    <ul><li>Used temoprary hint: -0.2 point </li></ul>
+    <ul><li>Missed match: -1 point </li></ul>
+    <ul><li>Used temoprary hint: 0 point </li></ul>
     <ul><li>Maximum score: 6 </li></ul>`
   }
 
@@ -134,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
+      alert('You found a match +1')
       cards[optionOneId].setAttribute('src', 'images/white.png')
       cards[optionTwoId].setAttribute('src', 'images/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
@@ -143,13 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('Sorry, try again')
+      alert('Sorry, try again -0.2')
+      cardsLose.push(cardsChosen)
     }
     cardsChosen = []
     cardsChosenId = []
-    resultDisplay.textContent = cardsWon.length
+    resultDisplay.textContent = cardsWon.length - cardsLose.length;
     if  (cardsWon.length === cardArray.length/2) {
-      resultDisplay.textContent = 'Congratulations! You found them all!'
+      resultDisplay.textContent = `Your score: ${cardsWon.length - cardsLose.length} Congratulations!`
     }
   }
 
