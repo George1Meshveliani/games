@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   }
+  // helper buttons
 
   function getHint() {
     const hinter = document.querySelector('.button1');
@@ -103,6 +104,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function reload() {
     reload = location.reload();
+  }
+
+  function readInstructions() {
+    const info = document.querySelector('.button3');
+    info.addEventListener('click', showInfo);
+  }
+
+  function showInfo() {
+    const information = document.querySelector('.information');
+    information.innerHTML = `
+    <h1> Instructions: </h1>
+    <h2> Memorize all couples and try to find all matches and get max scores </h2>
+    <ul><li>Founded match: +1 point </li></ul>
+    <ul><li>Missed match: -0.2 point </li></ul>
+    <ul><li>Used temoprary hint: -0.2 point </li></ul>
+    <ul><li>Maximum score: 6 </li></ul>`
   }
 
   //check for matches
@@ -150,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   showCards();
   getHint();
   tryAgain();
+  readInstructions();
 
 })
 

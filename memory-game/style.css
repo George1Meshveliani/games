@@ -18,5 +18,20 @@ h3 {
 .button2 {
     position: absolute;
     left: calc(50% - 30px);
-    margin-top: 80px;
+    margin-top: 50px;
 }
+
+.button3 {
+    position: absolute;
+    left: calc(50% - 55px);
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+.information {
+    position: relative;
+    text-align: left;
+    /* left: calc(50% - 55px); */
+    margin-top: 120px;
+    padding-left: 80px;
+} 
