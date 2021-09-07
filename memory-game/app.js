@@ -92,8 +92,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getHint() {
-    const hinter = document.querySelector('.button');
+    const hinter = document.querySelector('.button1');
     hinter.addEventListener('click', showCards);
+  }
+
+  function tryAgain() {
+    const tryAgn = document.querySelector('.button2');
+    tryAgn.addEventListener('click', reload, false);
+  }
+
+  function reload() {
+    reload = location.reload();
   }
 
   //check for matches
@@ -140,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
   createBoard();
   showCards();
   getHint();
+  tryAgain();
 
 })
 

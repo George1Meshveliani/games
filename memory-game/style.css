@@ -9,8 +9,14 @@ h3 {
     text-align: center;
 }
 
-button {
+.button1 {
     position: absolute;
     left: calc(50% - 60px);
     margin-top: 10px;
+}
+
+.button2 {
+    position: absolute;
+    left: calc(50% - 30px);
+    margin-top: 80px;
 }
