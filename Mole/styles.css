@@ -20,3 +20,9 @@ body {
 	background-image: url("./mole.jpg");
 	background-size: cover; 
 }
+
+@media only screen and (max-width: 600px) {
+	body {
+		padding: 0;
+	}
+}
