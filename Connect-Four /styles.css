@@ -1,3 +1,8 @@
+body {
+	margin-top: 0;
+	padding-left: 20%;
+}
+
 .grid {
 	width: 606px;
 	height: 606px;
@@ -12,6 +17,6 @@
 }
 
 .mole {
-	background-image: url("mole.jpg");
+	background-image: url("./mole.jpg");
 	background-size: cover; 
 }
