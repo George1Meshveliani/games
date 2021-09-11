@@ -7,3 +7,8 @@ Based on repository of @george1meshveliani
 ### Game1 - Memory game:
 
 [https://george1meshveliani.github.io/games/memory-game/](https://george1meshveliani.github.io/games/memory-game/)
+
+
+### Game2 - Whack a mole
+
+[https://george1meshveliani.github.io/games/Mole/](https://george1meshveliani.github.io/games/Mole/)
